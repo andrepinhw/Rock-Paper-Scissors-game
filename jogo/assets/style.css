@@ -1,0 +1,236 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(287.56deg, #273c97 0%, #0c1a55 100%);
+    height: 100vh;
+}
+
+
+:root{
+    --cinza: rgb(146, 146, 146);
+    --t-branco: rgb(236, 236, 236);
+
+}
+
+main{
+    display: grid;
+    place-items: center;
+    
+}
+
+.container-rules.open{
+    display: none;
+}
+
+.game.open{
+    display: none;
+}
+
+.score.open{
+    display: none;
+}
+
+
+
+/* parte score */
+.score{
+   display: flex;
+   justify-content: space-between;
+   width: 40%;
+   border: 3px solid var(--cinza);
+   padding: 10px;
+   border-radius: 10px;
+   margin-top: 20px;
+   z-index: 1;
+}
+
+.score-block{
+    width: 15%;
+    text-align: center;
+    border-radius: 10px ;
+    padding: 20px 10px;
+    background-color: var(--t-branco);
+}
+
+.score-block p{
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color:var(--cinza) ;
+}
+
+.score-block h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: var(--cinza);
+}
+
+/* parte rules */
+
+
+.container-rules{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.575);
+    gap: 50px;
+}
+
+.container-rules h2 {
+    color: rgb(172, 172, 172);
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.rules {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    padding: 40px;
+}
+
+.rules button, .sair-button{
+    width: 100px;
+    height: 35px;
+    
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid var(--cinza);
+    color: var(--t-branco);
+
+    transition: background 600ms;
+    cursor: pointer;
+}
+
+
+
+.sair-rules {
+    top: 0;
+    right: 0;
+    position: absolute;
+    padding: 40px;
+}
+
+.rules button:hover{
+    background-color: var(--cinza); 
+}
+
+.sair-button:hover{
+    background-color: var(--cinza);
+}
+
+
+/* parte do jogo  */
+
+
+.game{
+    display: grid;
+    place-items: center;
+    width: 450px;
+    height: 450px;
+    
+}
+
+.img-pentagono{
+    width: 80%;
+    height: 80%;
+    background-image: url(./img/bg-pentagon.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.game-buttons{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+}
+
+
+
+.spock-paper{
+    margin-bottom: 50px;
+    display: flex;
+    width: 120%;
+    height: 80%;
+    justify-content: space-between;
+}
+
+
+
+
+.lizard-rock{
+    
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    
+}
+
+.button-scissors, .button-spock, .button-paper,
+.button-lizard, .button-rock {
+     width: 110px;
+     height: 110px;
+     border-radius: 50%;
+     padding: 5px;
+     cursor: pointer;
+     
+     
+}
+
+.button-lizard {
+    border: 10px solid rgb(93, 207, 58);
+    transition: transform 0.2s;
+}
+.button-lizard:hover{
+    transform: scale(1.1);
+}
+
+
+.button-paper{
+    border: 13px solid rgb(58, 140, 207);
+    transition: transform 0.2s;
+}
+.button-paper:hover{
+    transform: scale(1.1);
+}
+
+
+.button-rock{
+    border: 13px solid rgb(209, 88, 88);
+    transition: transform 0.2s;
+}
+.button-rock:hover {
+    transform: scale(1.1);
+}
+
+
+.button-scissors{
+    border: 13px solid rgb(207, 192, 58);
+    transition: transform 0.2s;
+}
+.button-scissors:hover{
+    transform: scale(1.1);
+}
+
+.button-spock{
+  border: 13px solid rgb(190, 58, 207);
+  transition: transform 0.2s;
+}
+.button-spock:hover{
+    transform: scale(1.1);
+}
+
